@@ -33,9 +33,9 @@ namespace MigrationSqlStorage
                 throw new Exception($"{mongoDb} is not set.");
             }
 
-            Console.WriteLine($"ConnectionString:{mongoCn}");
+            //Console.WriteLine($"ConnectionString:{mongoCn}");
 
-            Console.WriteLine($"Database:{mongoDb}");
+            //Console.WriteLine($"Database:{mongoDb}");
 
             if (_db == null)
             {
