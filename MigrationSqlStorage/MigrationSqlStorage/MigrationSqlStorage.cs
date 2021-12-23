@@ -95,13 +95,17 @@ namespace MigrationSqlStorage
                 foreach (var item in sendItems)
                 {
                     MigrateItem(item, storeId);
+
+                    Console.WriteLine($"Done. " +
+                        $"Migrated Uid - {item.Uid} , " +
+                        $"CampaignId - {item.CampaignId} ");
                 }
 
                 page++;
 
                 sendItems = GetTop500MongoDbCampaign(page, rpp, campaignId);
 
-                Console.WriteLine($"Total migrated from mongodb records : {sendItems} ," +
+                Console.WriteLine($"Total migrated from mongodb records : {totalRecords} ," +
                     $"StoreId : {storeId} ," +
                     $"CampaignId : {campaignId} ");
             }
